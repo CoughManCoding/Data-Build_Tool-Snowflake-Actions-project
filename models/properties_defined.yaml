@@ -1,0 +1,8 @@
+models:
+  - name: 'versicolor'
+    config: 
+      materialized: 'table'
+  - name: 'fetching_setosa'
+    config:
+      materialized: 'view'
+
