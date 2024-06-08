@@ -5,7 +5,9 @@ version: '0.0.2'
 profile: 'default'
 
 model-paths: ["models"]
-
+# The thread are used in parallel models, i i have 4 models where and 1 thread, 
+# then it will run 1 model and then the other, 
+# however we need more threads for parrallel computing.
 # needed by the dbt internally ot process the commits and commands.
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
@@ -23,8 +25,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
+
+
+
+# The thread are used in parallel models, i i have 4 models where and 1 thread, then it will run 1 model and then the other, however we need more threads for parrallel computing.
 models:
-  my_new_project:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
+  # dbt_snow_bridge:
+    materialized: table
+      # Other matriealisations are View, empehrical, increamental.
+      # in sql we only have two materilsed views table and view.
