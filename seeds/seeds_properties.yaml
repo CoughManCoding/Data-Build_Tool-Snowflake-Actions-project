@@ -1,0 +1,16 @@
+seeds:
+  - name: "flower_country"
+    config:
+      full_refresh: True
+      materialized: 'seed' # a seed can only have a materialzed view that of a seed.
+      # to refresh the complete tables on snoflake, 
+      # since the tables have already been completed.
+      # I still want to change the type of the column type in the data
+      # so with full_refresh, 
+      # i command the snowflake to compeletly chaneg the code.
+      column_types:
+        flower_name: 'Varchar2(100)'
+       ## - COUNTRY_IT_BELONGS: 'Varchar(100)'  
+      # don't say string, amke sure that the tect u use here is whare house friendly.
+
+    

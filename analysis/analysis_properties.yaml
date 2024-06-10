@@ -1,0 +1,6 @@
+sources:
+  - name: quick_adhoc_other_flowers
+    database:  DB_ECOMMERCE
+    schema: SC_ECOM_ADMIN
+    tables:
+      - name: DB_FLOWERS
