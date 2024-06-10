@@ -4,3 +4,17 @@
 
 /* reering to the seed csv file of flower_country.csv*/
 select * from {{ref("flower_country")}}
+
+--calling a macro
+--macros is defined in the  macors folder
+-- select a*,
+-- {{percentage_change_func(petal_length,petal_length)}} as percentage_change
+-- from {{source('flowers','DB_FLOWERS')}} a
+
+
+
+--correct method:
+-- the the columns are defined or passed in ''
+-- select a.*,
+-- {{ percentage_change_func('petal_length', 'petal_length') }} as percentage_change
+-- from {{ source('flowers', 'DB_FLOWERS') }} a

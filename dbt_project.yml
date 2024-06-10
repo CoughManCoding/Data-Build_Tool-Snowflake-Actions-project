@@ -3,9 +3,13 @@ name: 'dbt_snow_bridge'
 version: '0.0.3'
 seed-paths: ["seeds"]
 analysis-paths: ["analysis"]
+macro-paths: ["macros"]
 profile: 'default'
 
-model-paths: ["models"]
+model-paths:
+  - "models"
+  - "ephemeral_models"
+
 # The thread are used in parallel models, i i have 4 models where and 1 thread, 
 # then it will run 1 model and then the other, 
 # however we need more threads for parrallel computing.
