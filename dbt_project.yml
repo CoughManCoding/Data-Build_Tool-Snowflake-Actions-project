@@ -1,7 +1,7 @@
 
 name: 'dbt_snow_bridge'
-version: '0.0.2'
-
+version: '0.0.3'
+seed-paths: ["seeds"]
 profile: 'default'
 
 model-paths: ["models"]

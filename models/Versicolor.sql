@@ -4,7 +4,6 @@
 -- in the project file.yml we have mentined that everything should go as  table,
 -- but here we are specifically mentionining that the the materializaation is 
 --of the type view 
-
 -- the setting mentioned here will be given priority over the dbt_project.yml file
 
 with versicolor as 
