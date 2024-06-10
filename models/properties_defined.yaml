@@ -1,3 +1,11 @@
+sources:
+  - name: flowers
+    database:  DB_ECOMMERCE
+    schema: SC_ECOM_ADMIN
+    tables:
+      - name: DB_FLOWERS
+
+
 models:
   - name: 'versicolor'
     config: 
@@ -5,4 +13,5 @@ models:
   - name: 'fetching_setosa'
     config:
       materialized: 'view'
+      # materialized: 'view'
 
